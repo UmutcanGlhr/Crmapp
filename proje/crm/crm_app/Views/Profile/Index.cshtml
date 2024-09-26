@@ -1,0 +1,25 @@
+@model (IdentityUser,IEnumerable<Company>)
+
+
+<div class="profile">
+    <aside>
+        <partial name="_profileSideBar" />
+    </aside>
+
+    <div class="profile_left">
+        <h1>Profilim</h1>
+        <h5>@Model.Item1.UserName</h5>
+        <h5>@Model.Item1.Email</h5>
+        <h5>@Model.Item1.PhoneNumber</h5>
+        <p>&nbsp;</p>
+        @foreach (var company in Model.Item2)
+        {
+            <h4>@company.companyName</h4>
+            <img src="@company.CompanyLogo" />
+            <h4>@company?.category?.CategoryName</h4>
+        }
+
+
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+
+    <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin Panel</a>
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+
+    <a asp-controller="Profile" asp-action="Index">Profilim</a>
+    <a asp-controller="Profile" asp-action="Logout">Logout</a>
+}
+else
+{
+    <a asp-controller="Login" asp-action="Index" class="btn-login"><i class="fas fa-sign-in-alt"></i>Login</a>
+}

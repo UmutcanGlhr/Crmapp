@@ -1,0 +1,8 @@
+@model IEnumerable<Category>
+
+<div>
+    @foreach(var cat in Model){
+        <a href="#">@cat.CategoryName</a>
+        <p>&nbsp;</p>
+    }
+</div>

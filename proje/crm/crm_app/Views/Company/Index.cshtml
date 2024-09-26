@@ -1,0 +1,15 @@
+@model IEnumerable<Company>
+
+<h1>Şirketler</h1>
+
+<div>
+    @await Component.InvokeAsync("CategoriesMenu")
+</div>
+
+
+@foreach (Company company in Model)
+{   
+    <img src="@company.CompanyLogo"/>
+    <h1>@company.companyName</h1>
+    
+}

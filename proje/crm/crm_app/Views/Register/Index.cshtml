@@ -1,0 +1,23 @@
+@model RegisterDto
+
+<h1>Register</h1>
+
+
+<form method="post" asp-action="Index">
+    <label asp-for="UserName"></label>
+    <input asp-for="UserName">
+    <p>&nbsp;</p>
+    <label asp-for="Email"></label>
+    <input asp-for="Email">
+    <p>&nbsp;</p>
+    <label asp-for="Password"></label>
+    <input asp-for="Password" type="password">
+    <p>&nbsp;</p>
+    <label asp-for="PhoneNumber"></label>
+    <input asp-for="PhoneNumber">
+    <p>&nbsp;</p>
+    
+    
+    <button type="submit">register</button>
+
+</form>

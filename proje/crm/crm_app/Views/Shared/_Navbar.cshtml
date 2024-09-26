@@ -1,0 +1,17 @@
+<div class="header-container">
+    <div class="logo">
+        <a asp-controller="Home" asp-action="Index"><img src="../images/logo.jpeg" alt="Logo"></a>
+    </div>
+    <nav>
+        <ul class="center-links">
+            <li><a href="#partners">Bizi Tercih Eden Firmalar</a></li>
+            <li><a href="#about">Hakkımızda</a></li>
+            <li><a href="#contact">İletişim</a></li>
+            <li><a asp-controller="Company" asp-action="Index">Firmalar</a></li>
+        </ul>
+    </nav>
+
+    <div class="auth-buttons">
+        <partial name="_LoginMenu" />
+    </div>
+</div>

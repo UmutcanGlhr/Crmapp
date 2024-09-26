@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\logo.jpeg",
+      "PackagePath": "staticwebassets\\images\\logo.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\profile-1.jpg",
+      "PackagePath": "staticwebassets\\images\\profile-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\profile-2.jpg",
+      "PackagePath": "staticwebassets\\images\\profile-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\profile-3.jpg",
+      "PackagePath": "staticwebassets\\images\\profile-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\profile-4.jpg",
+      "PackagePath": "staticwebassets\\images\\profile-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\randevufoto.png",
+      "PackagePath": "staticwebassets\\images\\randevufoto.png"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\sirket1.png",
+      "PackagePath": "staticwebassets\\images\\sirket1.png"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\sirket2.jpg",
+      "PackagePath": "staticwebassets\\images\\sirket2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\sirket3.png",
+      "PackagePath": "staticwebassets\\images\\sirket3.png"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\sirketekle.jpg",
+      "PackagePath": "staticwebassets\\images\\sirketekle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.crm_app.props",
+      "PackagePath": "build\\crm_app.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.crm_app.props",
+      "PackagePath": "buildMultiTargeting\\crm_app.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.crm_app.props",
+      "PackagePath": "buildTransitive\\crm_app.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.crm_app.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

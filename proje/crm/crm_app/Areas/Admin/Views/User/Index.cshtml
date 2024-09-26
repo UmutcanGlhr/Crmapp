@@ -1,0 +1,12 @@
+@model IEnumerable<IdentityUser>
+
+<h1>users</h1>
+<p>&nbsp;</p>
+
+@foreach (IdentityUser user in Model)
+{
+    <h5>@user.UserName</h5>
+    <h5>@user.Email</h5>
+    <h5>@user.PhoneNumber</h5>
+    <p>&nbsp;</p>
+}

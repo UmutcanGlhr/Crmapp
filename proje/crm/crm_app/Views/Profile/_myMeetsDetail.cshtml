@@ -1,0 +1,15 @@
+@model Meet
+
+
+<h5>@Model.ad</h5>
+<h5>@Model.soyad</h5>
+<h5>@Model.telefon</h5>
+<h5>@Model.Adres</h5>
+<h5>@Model.Description</h5>
+<h5>@Model.tarih</h5>
+<h5>@Model.active</h5>
+<p>&nbsp;</p>
+<form asp-action="Complete" method="post">
+    <input type="hidden" name="id" value="@Model.meetID">
+    <button type="submit" class="" >Complete</button>
+</form>

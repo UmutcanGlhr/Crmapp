@@ -1,0 +1,33 @@
+@model CompanyDtoForInsertion
+
+<div class="profile">
+    <aside>
+        <partial name="_profileSideBar" />
+    </aside>
+
+    <div class="profile_left">
+
+
+        <form asp-action="createCompany" method="post" enctype="multipart/form-data">
+            <label asp-for="companyName"></label>
+            <input type="text" asp-for="companyName">
+            <p>&nbsp;</p>
+            <div class="form-group my-3">
+                <label asp-for="CompanyLogo"></label>
+                <input name="file" type="file" class="form-control" />
+            </div>
+            <p>&nbsp;</p>
+            <div class="form-group my-3">
+                <label asp-for="categoryId">Category Name</label>
+                <select class="form-control" asp-for="categoryId" asp-items="@ViewBag.Categories">
+                </select>
+            </div>
+
+            <button type="submit">kaydet</button>
+        </form>
+
+
+
+    </div>
+
+</div>

@@ -1,0 +1,8 @@
+@model IEnumerable<Category>
+<h1>Cagetory Index</h1>
+
+@foreach(Category category in Model){
+    <h1>@category.CategoryName</h1>
+}
+
+<a asp-controller="Category" asp-action="categoryCreate">Create</a>

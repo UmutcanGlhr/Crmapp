@@ -1,0 +1,10 @@
+@model IEnumerable<Payment>
+
+<h1>YAPILAN SATIŞLAR</h1>
+
+@foreach(Payment py in Model){
+    <h1>@py.Amount</h1>
+    <h1>@py.UserID</h1>
+    <h1>@py.PaymentDate</h1>
+    <h1>@py.Status</h1>
+}

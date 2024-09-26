@@ -1,0 +1,38 @@
+@model IEnumerable<Company>
+
+<section class="content-section">
+    <div class="left-section">
+        <img src="../images/randevufoto.png" alt="Left Image">
+        <a asp-controller="MeetEntry" asp-action="Index" class="btn-appointment">Randevu Al</a>
+    </div>
+    <div class="right-section">
+        <img src="../images/sirketekle.jpg" alt="Right Image">
+        <a asp-controller="Register" asp-action="Index" class="btn-add-company">Register</a>
+    </div>
+</section>
+
+<!-- Bizi Tercih Eden Firmalar -->
+<section id="partners" class="partners-section">
+    <h2>Bizi Tercih Eden Firmalar</h2>
+    <div class="partners-logos">
+        <button class="arrow left-arrow">←</button>
+        <div class="logos">
+            @foreach (Company cmp in Model)
+            {
+                <img src="@cmp.CompanyLogo" />
+            }
+        </div>
+        <button class="arrow right-arrow">→</button>
+    </div>
+</section>
+
+<!-- Hakkımızda ve İletişim -->
+<section id="about" class="about-section">
+    <h2>Hakkımızda</h2>
+    <p>Biz bir teknoloji şirketiyiz, müşterilerimize en iyi hizmeti sunmak için çalışıyoruz...</p>
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>İletişim</h2>
+    <p>Bize ulaşın: contact@example.com</p>
+</section>
