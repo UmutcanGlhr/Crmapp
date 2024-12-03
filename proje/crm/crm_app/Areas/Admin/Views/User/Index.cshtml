@@ -1,12 +1,113 @@
-@model IEnumerable<IdentityUser>
+@model IEnumerable<AppUser>
 
-<h1>users</h1>
-<p>&nbsp;</p>
+<div class="text-center my-3" style="margin-top: 1rem;">
+    <h1>Kullanıcılar</h1>
+</div>
+<div class="my-3">
+    <table>
+        <thead>
+            <tr>
+                <th class="row-header">Firma Adı </th>
+                <th class="column-header">AD</th>
+                <th class="column-header">SOYAD</th>
+                <th class="column-header">TC Kimlik</th>
+                <th class="column-header">Vergi Numarası </th>
+                <th class="column-header">Vergi Dairesi</th>
+                <th class="column-header">E-Posta </th>
+                <th class="column-header">Telefon Numarası </th>
+                <th class="column-header">Aktiflik Durumu </th>
+                <th class="column-header">Uzmanlık Alanı </th>
+                <th class="column-header">Biyografi </th>
+                <th class="column-header">ShowCase </th>
+                <th class="column-header">üyelik Baslangic Tarihi </th>
+                <th class="column-header">üyelik Bitiş Tarihi </th>
+                <th class="column-header">kontroller </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td class="row-header">@user.FirmaAdi</td>
+                    <td contenteditable="true">@user.AD</td>
+                    <td contenteditable="true">@user.SOYAD</td>
+                    <td contenteditable="true">@user.TcKimlik</td>
+                    <td contenteditable="true">@user.VergiNo</td>
+                    <td contenteditable="true">@user.VergiDairesi</td>
+                    <td contenteditable="true">@user.Email</td>
+                    <td contenteditable="true">@user.PhoneNumber</td>
+                    <td contenteditable="true">@user.aktive</td>
+                    <td contenteditable="true">@user.uzmanlikAlani</td>
+                    <td contenteditable="true">@user.Biyografi</td>
+                    <td contenteditable="true">@user.ShowCase</td>
+                    <td contenteditable="true">@user.baslangic</td>
+                    <td contenteditable="true">@user.bitis</td>
+                    <td >
+                       
+                        <div class="btn btn-group">
+                            <a asp-action="inactive" asp-route-id="@user.Id" class="btn btn-outline-primary rounded">Aktifliği Bitir</a>
+                            <a asp-action="onshowcase" asp-route-id="@user.Id" class="btn btn-primary rounded">Öne Çıkar</a>
+                            <a asp-action="closeShowCase" asp-route-id="@user.Id" class="btn btn-outline-primary rounded">Öne Çıkarılanlardan kaldır</a>
+                        </div>
+                    
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+    
 
-@foreach (IdentityUser user in Model)
-{
-    <h5>@user.UserName</h5>
-    <h5>@user.Email</h5>
-    <h5>@user.PhoneNumber</h5>
-    <p>&nbsp;</p>
-}
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        td {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        .table-header {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .column-headers th {
+            width: 100px;
+        }
+
+        /* Hover efekti */
+        tr:hover {
+            background-color: #e2e6ea;
+        }
+
+        /* Excel'deki satır ve sütun başlıkları */
+        .row-header {
+            background-color: #f4f4f4;
+            text-align: center;
+            font-weight: bold;
+            width: 40px;
+        }
+
+        .column-header {
+            background-color: #f4f4f4;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>

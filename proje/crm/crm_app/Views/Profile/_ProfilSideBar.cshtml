@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="~/css/profileSideBar.css">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+<aside class="sidebar">
+    <div class="logo">
+        <a asp-action="Index" asp-controller="Home">
+            <h2>RandevuBUL.com.tr</h2>
+        </a>
+    </div>
+    <ul class="links">
+        <h4>Randevular</h4>
+        <li>
+            <span class="material-symbols-outlined">notifications</span>
+            <a asp-action="mymeet" asp-controller="Profile">Aktif Randevularım</a>
+        </li>
+        <li>
+            <span class="material-symbols-outlined">description</span>
+            <a asp-action="pastmeet" asp-controller="Profile">Geçmiş Randevularım</a>
+        </li>
+        <li>
+            <span class="material-symbols-outlined">date_range</span>
+            <a asp-action="randevu" asp-controller="Profile">Randevuları Düzenle</a>
+        </li>
+        <hr>
+        <h4>Hesap Ayaları</h4>
+        <li>
+            <span class="material-symbols-outlined">account_circle</span>
+            <a asp-action="Index" asp-controller="Profile">Hesabım</a>
+        </li>
+        <li>
+            <span class="material-symbols-outlined">settings</span>
+            <a asp-action="setting" asp-controller="Profile">Hesap Ayaları</a>
+        </li>
+        <li>
+            <span class="material-symbols-outlined">lock_reset</span>
+            <a asp-action="resetpassword" asp-controller="Profile">Şifre Yenileme</a>
+        </li>
+        <hr>
+        <h4>Üyelik İşlemleri</h4>
+        <li class="logout-link">
+            <span class="material-symbols-outlined">payments</span>
+            <a asp-action="configureproduct" asp-controller="Profile">Üyelik Satın Al</a>
+        </li>
+        <hr>
+        <li class="logout-link">
+            <span class="material-symbols-outlined">logout</span>
+            <a asp-action="Logout" asp-controller="Account">Çıkış Yap</a>
+        </li>
+
+    </ul>
+</aside>

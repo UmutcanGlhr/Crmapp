@@ -1,2 +1,8 @@
-<h1>Dashboard</h1>
-
+<div class="text-center my-5 border-bottom">
+    <div class="display-6">Dashboard</div>
+</div>
+<a class="btn btn-success rounded" asp-action="CreateAppointmentsForAllUsers" asp-controller="Dashboard">Yeni Gün Randevusu Aç</a>
+<a class="btn btn-success rounded" asp-action="deletePastMeetSlot" asp-controller="Dashboard">Eski Randevuları Temizle</a>
+<div class="my-5">
+     <partial name="_card" />
+</div>

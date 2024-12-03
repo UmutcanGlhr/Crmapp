@@ -14,7 +14,9 @@ namespace crm_app.Components
 
         public IViewComponentResult Invoke()
         {
-            var categories =_manager.CategoryService.GetAllCategory(false);
+            var categories = _manager.CategoryService.GetAllCategory(false);
+
+           
             return View(categories);
         }
     }

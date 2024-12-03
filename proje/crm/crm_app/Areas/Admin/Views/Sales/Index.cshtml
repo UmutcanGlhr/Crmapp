@@ -1,10 +1,31 @@
 @model IEnumerable<Payment>
 
-<h1>YAPILAN SATIŞLAR</h1>
+<div class="text-center my-3">
+    <h1 class="display-6 my-4">YAPILAN SATIŞLAR</h1>
 
-@foreach(Payment py in Model){
-    <h1>@py.Amount</h1>
-    <h1>@py.UserID</h1>
-    <h1>@py.PaymentDate</h1>
-    <h1>@py.Status</h1>
-}
+    <div class="my-3">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">User ID</th>
+                    <th scope="col">Fiyat</th>
+                    <th scope="col">satın alma tarihi</th>
+                    <th scope="col">Statü</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (Payment py in Model)
+                {
+                    <tr>
+                        <th scope="row">@py.UserID</th>
+                        <th scope="row">@py.Amount</th>
+                        <th scope="row">@py.PaymentDate</th>
+                        <th scope="row">@py.Status</th>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

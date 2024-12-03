@@ -1,19 +1,14 @@
 using crm_app.Infrastructe.Extensions;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using Repositories;
-using Repositories.Contracts;
-using Services;
-using Services.Contracts;
-using Iyzipay;
-using Microsoft.Extensions.DependencyInjection;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers();
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.ConfigureDbContext(builder.Configuration);
 builder.Services.ConfigureSession();
@@ -22,6 +17,8 @@ builder.Services.ConfigureRepositoryRegistration();
 builder.Services.ConfigureServiceRegistration();
 
 builder.Services.ConfigureIdentity();
+builder.Services.ConfigureRouting();
+builder.Services.ConfigureApplicationCookie();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
@@ -39,7 +36,11 @@ app.UseEndpoints(endpoints =>
         areaName: "Admin",
         pattern: "Admin/{controller=Dashboard}/{action=Index}/{id?}"
     );
+    
     endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+    
+    endpoints.MapRazorPages();
+    endpoints.MapControllers();
 });
 
 

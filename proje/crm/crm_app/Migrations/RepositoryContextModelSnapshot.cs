@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Repositories;
 
@@ -15,51 +16,145 @@ namespace crm_app.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
+            modelBuilder
+                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            modelBuilder.Entity("Entities.Models.Adress", b =>
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Entities.Models.AppUser", b =>
                 {
-                    b.Property<int>("AddressID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("AddressName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<string>("AD")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CityName")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
 
-                    b.Property<string>("DistrictName")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Biyografi")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ZipCode")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("userId")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("DogumYili")
+                        .HasColumnType("int");
 
-                    b.HasKey("AddressID");
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
-                    b.ToTable("Adress");
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
 
-                    b.HasData(
-                        new
-                        {
-                            AddressID = 1,
-                            AddressName = "eskişehir"
-                        });
+                    b.Property<string>("FirmaAdi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirmaLogo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SOYAD")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("ShowCase")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("TamAdres")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TcKimlik")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("VergiDairesi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VergiNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("aktive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("baslangic")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("bitis")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("categoryID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ranking")
+                        .HasColumnType("int");
+
+                    b.Property<string>("uzmanlikAlani")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("İlçe")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Şehir")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Models.Category", b =>
                 {
                     b.Property<int>("CategoryID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryID"));
 
                     b.Property<string>("CategoryName")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CategoryID");
 
@@ -69,86 +164,102 @@ namespace crm_app.Migrations
                         new
                         {
                             CategoryID = 1,
-                            CategoryName = "bilgisayar"
+                            CategoryName = "Yazılım"
+                        },
+                        new
+                        {
+                            CategoryID = 2,
+                            CategoryName = "Tesisat"
+                        },
+                        new
+                        {
+                            CategoryID = 3,
+                            CategoryName = "Bilgisayar"
                         });
                 });
 
-            modelBuilder.Entity("Entities.Models.Company", b =>
+            modelBuilder.Entity("Entities.Models.Contact", b =>
                 {
-                    b.Property<int>("companyID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("ContactID")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("CompanyLogo")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("categoryId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("companyName")
+                    b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("userId")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Konu")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("companyID");
+                    b.Property<string>("Mesaj")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("categoryId");
+                    b.Property<string>("isim")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("companies");
+                    b.HasKey("ContactID");
 
-                    b.HasData(
-                        new
-                        {
-                            companyID = 1,
-                            CompanyLogo = "",
-                            categoryId = 1,
-                            companyName = "GüvenPC"
-                        });
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("Entities.Models.Meet", b =>
                 {
                     b.Property<int>("meetID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("meetID"));
 
                     b.Property<string>("Adres")
                         .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("CompanyID")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MeetSlotID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Saat")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("active")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("bit");
 
                     b.Property<string>("ad")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ilçe")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("sorguKodu")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("soyad")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("tarih")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("tarih")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("telefon")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("userID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Şehir")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("meetID");
 
-                    b.HasIndex("CompanyID");
+                    b.HasIndex("MeetSlotID");
 
                     b.ToTable("meets");
 
@@ -156,76 +267,96 @@ namespace crm_app.Migrations
                         new
                         {
                             meetID = 1,
-                            Adres = "kütahya",
-                            CompanyID = 1,
+                            Adres = "zafer tepe mh",
                             Description = "format atilacak",
+                            MeetSlotID = 1,
                             active = true,
                             ad = "berkay",
+                            ilçe = "Merkez",
                             soyad = "ekit",
-                            tarih = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             telefon = "0513212313",
-                            userID = "sadasdasdasdsa"
+                            Şehir = "kütahya"
                         });
                 });
 
-            modelBuilder.Entity("Entities.Models.Order", b =>
+            modelBuilder.Entity("Entities.Models.MeetSlot", b =>
                 {
-                    b.Property<int>("OrderID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("TEXT");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("productID")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Date")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsBooked")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Time")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("userID")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("OrderID");
+                    b.HasKey("Id");
 
-                    b.ToTable("Order");
+                    b.HasIndex("userID");
+
+                    b.ToTable("MeetSlots");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Date = " ",
+                            IsBooked = false,
+                            Time = " "
+                        });
                 });
 
             modelBuilder.Entity("Entities.Models.Payment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("TEXT");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Amount")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CardHolderName")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CardNumber")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Cvv")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ExpirationMonth")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ExpirationYear")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PaymentDate")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("PaymentMethod")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserID")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("productId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -236,63 +367,134 @@ namespace crm_app.Migrations
                 {
                     b.Property<int>("ProductID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductID"));
+
+                    b.Property<string>("DenemeSüresi")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaketSüresi")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductName")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("price")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("descrp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("price")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductID");
 
                     b.ToTable("Product");
                 });
 
+            modelBuilder.Entity("Entities.Models.SiteSettings", b =>
+                {
+                    b.Property<int>("siteID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("siteID"));
+
+                    b.Property<string>("ImgUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImgUrl2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImgUrl3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImgUrl4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("copyright")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("hakkimizda")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("siteAdi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("siteInstagram")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("siteLinkedin")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("siteMail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("siteNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("siteID");
+
+                    b.ToTable("SiteSettings");
+
+                    b.HasData(
+                        new
+                        {
+                            siteID = 1,
+                            copyright = "bu sitenin telif haklari umcbilisime aittir",
+                            hakkimizda = "hedefimiz zaman ve herkes zamanini planlasin",
+                            siteAdi = "Randevu BUL",
+                            siteInstagram = "umcbilisim",
+                            siteLinkedin = "umcbilisim",
+                            siteMail = "umcbilisim@gmail.com",
+                            siteNumber = "05526734412"
+                        });
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasMaxLength(256)
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("NormalizedName")
                         .HasMaxLength(256)
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
-                        .HasDatabaseName("RoleNameIndex");
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
 
                     b.HasData(
                         new
                         {
-                            Id = "10044b0d-8938-4d53-a5c6-5d1403cc894c",
+                            Id = "47f940e3-7073-4158-9ac9-c4c1d019cfc4",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "8b264468-2016-440d-bfb6-f218f38b5fa3",
+                            Id = "25ea11f8-a769-4615-9492-258285af642b",
                             Name = "Editor",
                             NormalizedName = "EDITOR"
                         },
                         new
                         {
-                            Id = "0296dcd5-c997-4a38-b04e-ed05f2623905",
+                            Id = "b4668168-383e-4b59-aeb7-f77fce4b64be",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -302,17 +504,19 @@ namespace crm_app.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -321,85 +525,23 @@ namespace crm_app.Migrations
                     b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex");
-
-                    b.ToTable("AspNetUsers", (string)null);
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -411,17 +553,17 @@ namespace crm_app.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -433,10 +575,10 @@ namespace crm_app.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("RoleId")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("UserId", "RoleId");
 
@@ -448,38 +590,40 @@ namespace crm_app.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Entities.Models.Company", b =>
-                {
-                    b.HasOne("Entities.Models.Category", "category")
-                        .WithMany("companies")
-                        .HasForeignKey("categoryId");
-
-                    b.Navigation("category");
-                });
-
             modelBuilder.Entity("Entities.Models.Meet", b =>
                 {
-                    b.HasOne("Entities.Models.Company", "company")
+                    b.HasOne("Entities.Models.MeetSlot", "MeetSlot")
                         .WithMany()
-                        .HasForeignKey("CompanyID");
+                        .HasForeignKey("MeetSlotID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("company");
+                    b.Navigation("MeetSlot");
+                });
+
+            modelBuilder.Entity("Entities.Models.MeetSlot", b =>
+                {
+                    b.HasOne("Entities.Models.AppUser", "user")
+                        .WithMany()
+                        .HasForeignKey("userID");
+
+                    b.Navigation("user");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -493,7 +637,7 @@ namespace crm_app.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Entities.Models.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -502,7 +646,7 @@ namespace crm_app.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Entities.Models.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -517,7 +661,7 @@ namespace crm_app.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Entities.Models.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -526,16 +670,11 @@ namespace crm_app.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Entities.Models.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Entities.Models.Category", b =>
-                {
-                    b.Navigation("companies");
                 });
 #pragma warning restore 612, 618
         }

@@ -4,7 +4,10 @@ namespace Entities.Models
     {
         public int ProductID { get; set; }
         public String? ProductName { get; set; } = String.Empty;
-        public decimal  price { get; set; }
+        public String?  price { get; set; }
         public String? Description { get; set; } = String.Empty;
+        public String? DenemeSüresi { get; set; } = String.Empty;
+        public String? descrp { get; set; } = String.Empty;
+        public String? PaketSüresi { get; set; } = String.Empty;
     }
 }

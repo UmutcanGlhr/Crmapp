@@ -9,40 +9,40 @@ namespace Repositories
 
         private readonly ICategoryRepository _categoryRepository;
 
-        private readonly IAdressRepository _adressRepository;
-
-        private readonly ICompanyRepository _companyRepository;
-
         private readonly IProductRepository _productRepository;
 
-        private readonly IOrderRepositoy _orderRepositoy;
-
         private readonly IPaymentRepository _paymentRepository;
-        public RepositoryManager(IMeetRepository meetRepository, RepositoryContext context, ICategoryRepository categoryRepository, IAdressRepository adressRepository, ICompanyRepository companyRepository, IProductRepository productRepository, IOrderRepositoy orderRepositoy, IPaymentRepository paymentRepository)
+        private readonly IContactRepository _contactRepository;
+        private readonly IMeetSlotRepository _meetSlotRepository;
+
+        private readonly ISiteSettingsRepository _siteSettingsRepository;
+        public RepositoryManager(IMeetRepository meetRepository, RepositoryContext context, ICategoryRepository categoryRepository, IProductRepository productRepository, IPaymentRepository paymentRepository, IContactRepository contactRepository, IMeetSlotRepository meetSlotRepository, ISiteSettingsRepository siteSettingsRepository)
         {
             _meetRepository = meetRepository;
             _context = context;
             _categoryRepository = categoryRepository;
-            _adressRepository = adressRepository;
-            _companyRepository = companyRepository;
+
             _productRepository = productRepository;
-            _orderRepositoy = orderRepositoy;
             _paymentRepository = paymentRepository;
+            _contactRepository = contactRepository;
+            _meetSlotRepository = meetSlotRepository;
+            _siteSettingsRepository = siteSettingsRepository;
         }
 
         public IMeetRepository Meet => _meetRepository;
 
         public ICategoryRepository Category => _categoryRepository;
 
-        public IAdressRepository Adress => _adressRepository;
 
-        public ICompanyRepository Company => _companyRepository;
-
-        public Contracts.IProductRepository Product =>  _productRepository;
-
-        public IOrderRepositoy Order =>_orderRepositoy;
+        public IProductRepository Product =>  _productRepository;
 
         public IPaymentRepository Payment => _paymentRepository;
+
+        public IContactRepository Contact => _contactRepository;
+
+        public IMeetSlotRepository MeetSlot =>_meetSlotRepository;
+
+        public ISiteSettingsRepository settingsRepository => _siteSettingsRepository;
 
         public void Save()
         {

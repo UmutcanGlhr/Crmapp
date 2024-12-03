@@ -1,0 +1,46 @@
+@model Meet
+
+<div class="my-5 text-center">
+    <div class="display-6"> Merhabalar bu sayfadan randevularınızı sorgulayabilirsiniz!</div>
+    <p class="text-danger">11 Haneli Randevu Kodunuzu Giriniz!</p>
+    <form method="post" asp-action="Index" asp-controller="Sorgu">
+        <div class="form-group">
+            <div class="form-group my-3 ">
+                <label asp-for="sorguKodu">Sorgu Kodu :</label>
+                <input type="text" class="form-control" asp-for="sorguKodu" placeholder="Sorgu Kodunu Giriniz" required>
+            </div>
+            <button class="btn btn-outline-success rounded" type="submit"><i class="bi bi-search"></i>  Sorgula</button>
+        </div>
+    </form>
+</div>
+
+@if (string.IsNullOrEmpty(Model.sorguKodu)) // İlk başta model null ise
+{
+    <div class="alert alert-warning">Lütfen bir randevu kodu girin ve sorgulamak için butona tıklayın.</div>
+}
+else // Model dolu ise
+{
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Randevu Bilgileri
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@Model?.ad @Model?.soyad</h5>
+                        <p class="card-text">Tarih: @Model?.tarih / @Model?.Saat</p>
+                        <p class="card-text">Adres: @Model?.Şehir / @Model?.ilçe, @Model?.Adres</p>
+                        <p class="card-text">Açıklama: @Model?.Description</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Randevu durumu:
+                        <span class="badge @(Model.active ? "bg-success" : "bg-danger")">
+                            @(Model.active ? "Aktif" : "Pasif")
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

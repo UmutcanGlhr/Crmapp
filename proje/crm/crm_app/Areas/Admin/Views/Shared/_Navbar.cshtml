@@ -1,53 +1,48 @@
-<div class="top">
-    <div class="logo">
-        <img src="../images/logo.png" alt="">
-        <h2>Firma<span class="danger">Ad</span></h2>
-    </div>
+<link rel="stylesheet" href="~/css/admin.css">
+<aside>
+    <div class="top">
+        <div class="logo" style="margin-left: 2rem;">
+            <a asp-area="" asp-action="Index" asp-controller="Home">
+                <h2>Randevu<span class="primary">BUL</span></h2>
+            </a>
+        </div>
 
-    <div class="close" id="close-btn">
-        <span class="material-symbols-outlined">close</span>
+        <div class="close" id="close-btn">
+            <span class="material-symbols-outlined">close</span>
+        </div>
     </div>
-</div>
-<div class="sidebar">
-    <a asp-controller="Dashboard" asp-action="Index">
-        <span class="material-symbols-outlined">dashboard</span>
-        <h3>Dashboard</h3>
-    </a>
-    <a asp-controller="User" asp-action="Index" class="active">
-        <span class="material-symbols-outlined">person</span>
-        <h3>Users</h3>
-    </a>
-    <a asp-controller="Category" asp-action="Index">
-        <span class="material-symbols-outlined">orders</span>
-        <h3>Category</h3>
-    </a>
-    <a asp-controller="Sales" asp-action="Index">
-        <span class="material-symbols-outlined">monitoring</span>
-        <h3>Analytics</h3>
-    </a>
-    <a href="#">
-        <span class="material-symbols-outlined">mail</span>
-        <h3>Messages</h3>
-        <span class="message-count">26</span>
-    </a>
-    <a href="#">
-        <span class="material-symbols-outlined">inventory_2</span>
-        <h3>Products</h3>
-    </a>
-    <a href="#">
-        <span class="material-symbols-outlined">report</span>
-        <h3>Reports</h3>
-    </a>
-    <a href="#">
-        <span class="material-symbols-outlined">settings</span>
-        <h3>Settings</h3>
-    </a>
-    <a href="#">
-        <span class="material-symbols-outlined">add</span>
-        <h3>Add Product</h3>
-    </a>
-    <a href="#">
-        <span class="material-symbols-outlined">logout</span>
-        <h3>Logout</h3>
-    </a>
-</div>
+    <div class="sidebar">
+        <a asp-controller="Dashboard" asp-action="Index">
+            <span class="material-symbols-outlined">dashboard</span>
+            <h3>Panel</h3>
+        </a>
+        <a asp-controller="User" asp-action="Index" class="">
+            <span class="material-symbols-outlined">person</span>
+            <h3>Kullanıcılar</h3>
+        </a>
+        <a asp-controller="Category" asp-action="Index">
+            <span class="material-symbols-outlined">orders</span>
+            <h3>Kategoriler</h3>
+        </a>
+        <a asp-controller="Sales" asp-action="Index">
+            <span class="material-symbols-outlined">monitoring</span>
+            <h3>Satışlar</h3>
+        </a>
+        <a asp-controller="Contact" asp-action="Index">
+            <span class="material-symbols-outlined">mail</span>
+            <h3>Mesajlar</h3>
+        </a>
+        <a asp-action="Index" asp-controller="Product">
+            <span class="material-symbols-outlined">inventory_2</span>
+            <h3>Paketler</h3>
+        </a>
+        <a asp-action="Index" asp-controller="Settings">
+            <span class="material-symbols-outlined">settings</span>
+            <h3>Site Ayaları</h3>
+        </a>
+        <a asp-area="" asp-action="Logout" asp-controller="Account">
+            <span class="material-symbols-outlined">Logout</span>
+            <h3>Çıkış Yap</h3>
+        </a>
+    </div>
+</aside>

@@ -1,0 +1,16 @@
+@model IEnumerable<AppUser>
+
+<div class="row">
+    <div class="col-md-3">
+        @await Component.InvokeAsync("CategoriesMenu")
+    </div>
+    <div class="col-md-9">
+        <div class="row my-2">
+            @foreach (var ap in Model)
+            {
+                <partial name="_companiesCard" model="@ap" />
+            }
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,117 @@
+@model AppUserRegisterDto
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Kayıt Formu</h1>
+
+    <div class="text-center mb-4">
+        <a class="btn btn-primary" asp-controller="Account" asp-action="Register">Firma Kaydı</a>
+        <a class="btn btn-primary" asp-controller="Account" asp-action="UserRegister">Şahıs Kaydı</a>
+    </div>
+
+    <div id="sahisKayit" class="form-section">
+        <div class="form-header">
+            <h4>Şahıs Kaydı</h4>
+        </div>
+        <form asp-action="UserRegister" method="post" enctype="multipart/form-data">
+            <div class="text-danger" asp-validation-summary="All"></div>
+            <div class="form-group my-3 ">
+                <label asp-for="AD">İsim</label>
+                <input type="text" class="form-control" asp-for="AD" placeholder="İsiminizi giriniz" required>
+            </div>
+            <div class="form-group my-3 ">
+                <label asp-for="SOYAD">Soyad</label>
+                <input type="text" class="form-control" asp-for="SOYAD" placeholder="Soyad girnizi" required>
+            </div>
+            <div class="form-group my-3 ">
+                <label asp-for="TcKimlik">TC Kimlik</label>
+                <input type="text" class="form-control" asp-for="TcKimlik" placeholder="TC Kimlik giriniz" required>
+            </div>
+            <div class="form-group my-3 ">
+                <label asp-for="DogumYili">Doğum Yılı</label>
+                <input type="text" class="form-control" asp-for="DogumYili" placeholder="Doğum Yılı" required>
+            </div>
+            <div class="form-group my-3 ">
+                <label asp-for="Email">Email</label>
+                <input type="test" class="form-control" asp-for="Email" placeholder="Email giriniz" required>
+            </div>
+            <div class="form-group my-3 ">
+                <label asp-for="PhoneNumber">telefon : </label>
+                <input type="test" class="form-control" asp-for="PhoneNumber" placeholder="Telefon numaranızı giriniz"
+                    required>
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="FirmaLogo"></label>
+                <input name="file" type="file" class="form-control" />
+            </div>
+            <div class="form-group my-3 ">
+                <div class="row">
+                    <div class="col">
+                        <label asp-for="Şehir">Şehir</label>
+                        <input type="tel" class="form-control" asp-for="Şehir" placeholder="Şehir" required>
+                    </div>
+                    <div class="col">
+                        <label asp-for="İlçe">İlçe</label>
+                        <input type="text" class="form-control" asp-for="İlçe" placeholder="İlçe" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group my-3 ">
+                <label asp-for="TamAdres">Adres</label>
+                <input type="test" class="form-control" asp-for="TamAdres" placeholder="Adresinizi giriniz" required>
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="categoryID">Kategorinizi Seçiniz :</label>
+                <select class="form-control" asp-for="categoryID" asp-items="@ViewBag.Categories">
+                </select>
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="Password" for="inputField">Şifre</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="inputField" aria-describedby="inputHelp"
+                        asp-for="Password" placeholder="Şifrenizi giriniz" required>
+                    <span class="input-group-text">
+                        <!-- Ünlem İkonu -->
+                        <i class="bi bi-exclamation-circle-fill" data-bs-toggle="popover"
+                            title="Şifreniz en az 6 haneli ve en az bir alfanümerik olmayan karakter olmalıdır(+,*,.)!"
+                            data-bs-content="" style="cursor: pointer;"></i>
+                    </span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary" style="border-radius: 10px;">Şahıs Kaydı Yap</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<style>
+    .form-section {
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+    }
+
+    .form-header {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+    }
+
+    label {
+        font-weight: bold;
+    }
+</style>
+
+<script>
+    // Popover'ı başlat
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+</script>

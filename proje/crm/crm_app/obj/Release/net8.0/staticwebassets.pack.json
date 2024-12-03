@@ -1,0 +1,1101 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_maps.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_maps.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_placeholders.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_placeholders.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_variables-dark.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_variables-dark.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_color-bg.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_color-bg.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_focus-ring.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_focus-ring.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_icon-link.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_icon-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_stacks.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_stacks.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\helpers\\_vr.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_vr.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_backdrop.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_backdrop.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_banner.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_banner.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_color-mode.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_color-mode.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\css\\pay.css",
+      "PackagePath": "staticwebassets\\css\\pay.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\css\\profileSideBar.css",
+      "PackagePath": "staticwebassets\\css\\profileSideBar.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\css\\showcase.css",
+      "PackagePath": "staticwebassets\\css\\showcase.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\about-1.jpg",
+      "PackagePath": "staticwebassets\\images\\about-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\about-2.jpg",
+      "PackagePath": "staticwebassets\\images\\about-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\bg.jpg",
+      "PackagePath": "staticwebassets\\images\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\carousel-1.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\carousel-2.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\hero-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\hero-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\logo.jpeg",
+      "PackagePath": "staticwebassets\\images\\logo.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\service-1.jpg",
+      "PackagePath": "staticwebassets\\images\\service-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\service-2.jpg",
+      "PackagePath": "staticwebassets\\images\\service-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\service-3.jpg",
+      "PackagePath": "staticwebassets\\images\\service-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\team-1.jpg",
+      "PackagePath": "staticwebassets\\images\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\team-2.jpg",
+      "PackagePath": "staticwebassets\\images\\team-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\team-3.jpg",
+      "PackagePath": "staticwebassets\\images\\team-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\team-4.jpg",
+      "PackagePath": "staticwebassets\\images\\team-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\testimonial-3.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\images\\testimonial-4.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\js\\profile.js",
+      "PackagePath": "staticwebassets\\js\\profile.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\animate\\animate.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\counterup\\counterup.min.js",
+      "PackagePath": "staticwebassets\\lib\\counterup\\counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
+      "PackagePath": "staticwebassets\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
+      "PackagePath": "staticwebassets\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\tempusdominus\\js\\moment-timezone.min.js",
+      "PackagePath": "staticwebassets\\lib\\tempusdominus\\js\\moment-timezone.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\tempusdominus\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\lib\\tempusdominus\\js\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
+      "PackagePath": "staticwebassets\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
+      "PackagePath": "staticwebassets\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\wow\\wow.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\lib\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "C:\\Users\\umutc\\OneDrive\\Masaüstü\\proje\\crm\\crm_app\\wwwroot\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.crm_app.props",
+      "PackagePath": "build\\crm_app.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.crm_app.props",
+      "PackagePath": "buildMultiTargeting\\crm_app.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.crm_app.props",
+      "PackagePath": "buildTransitive\\crm_app.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.crm_app.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

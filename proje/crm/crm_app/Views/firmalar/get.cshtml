@@ -1,0 +1,68 @@
+@model RandevuViewModel
+<div class="row my-4">
+    <div class="col-md-4">
+        <div class="text-center">
+            <h6 class="display-6">
+                @Model?.User?.FirmaAdi
+            </h6>
+
+            <img class="img-fuild shadow rounded-3 my-3" width="250" src="@Model?.User?.FirmaLogo"
+                alt="@Model?.User?.FirmaAdi">
+            <p class="my-3">@Model?.User?.Email</p>
+            <p class="lead text-danger my-3">@Model?.User?.PhoneNumber</p>
+            <p class="lead text-danger my-3">@Model?.User?.TamAdres ,@Model?.User?.Şehir / @Model?.User?.İlçe</p>
+            <p class="lead text-danger my-3">@Model?.User?.uzmanlikAlani</p>
+            <p class="lead text-danger my-3">@Model?.User?.Biyografi</p>
+
+            <div class="btn-group my-3">
+                <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Anasayfa</a>
+                <a class="btn btn-outline-primary" asp-controller="firmalar" asp-action="Index">Firmalar</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <h1 class="text-center">Uygun Randevular</h1>
+
+        <!-- Tarih seçimi için form -->
+        <form method="get" asp-action="Get">
+            <label for="selectedDate">Randevu Tarihi Seçin:</label>
+            <input type="date" id="selectedDate" name="selectedDate"
+                value="@Model?.SelectedDate?.ToString("yyyy-MM-dd")" />
+            <input type="hidden" name="id" value="@Model?.User?.UserName" />
+            <button type="submit" class="btn btn-primary">Filtrele</button>
+        </form>
+
+        <table class="table" style="margin-left: 20px;">
+            <thead>
+                <tr>
+                    <th scope="col">Randevu Tarihi</th>
+                    <th scope="col">Randevu Saati</th>
+                    <th scope="col">İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model?.MeetSlots != null && Model.MeetSlots.Any())
+                {
+                    @foreach (var mt in Model.MeetSlots)
+                    {
+                        <tr>
+                            <th scope="row">@mt?.Date</th>
+                            <td>@mt?.Time</td>
+                            <td>
+                                <a class="btn btn-outline-primary rounded-pill" asp-action="ConfigureMeeting"
+                                    asp-controller="firmalar" asp-route-id="@mt?.Id">Randevu Al</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="3" class="text-center">Seçilen tarihte uygun randevu bulunamadı.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>

@@ -1,0 +1,52 @@
+@model IEnumerable<Product>
+
+<div class="text-center my-3">
+    <div class="display-6"><b>Paketler</b></div>
+
+    <div class="d-flex justify-content-end my-3">
+        <a class="btn btn-outline-success" asp-action="Create">
+            <i class="fa fa-plus"></i>
+            Create
+        </a>
+    </div>
+    <table class="table table-striped table-hover my-3">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Paket Adı</th>
+                <th>Fiyatı</th>
+                <th>Paket Süresi</th>
+                <th>Açıklama</th>
+                <th>açıklama 2</th>
+                <th>DenemeSüresi</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Product product in Model)
+            {
+                <tr>
+                    <th>@product.ProductID</th>
+                    <th>@product.ProductName</th>
+                    <th>@product.price</th>
+                    <th>@product.PaketSüresi</th>
+                    <th>@product.Description</th>
+                    <th>@product.descrp</th>
+                    
+                    <th>@product.DenemeSüresi</th>
+
+                    <th>
+                        <div class="btn-group">
+                            <a class="btn btn-warning" asp-controller="Product" asp-action="Update" asp-route-id="@product.ProductID">
+                                <i class="fa fa-edit"></i>
+                                Edit</a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@product.ProductID">
+                                <i class="fa fa-trash"></i>
+                                Delete</a>
+                        </div>
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

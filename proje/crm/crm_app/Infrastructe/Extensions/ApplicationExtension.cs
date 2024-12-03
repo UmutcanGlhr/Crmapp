@@ -1,4 +1,6 @@
+using Entities.Models;
 using Microsoft.AspNetCore.Identity;
+
 
 namespace crm_app.Infrastructe.Extensions
 {
@@ -10,24 +12,25 @@ namespace crm_app.Infrastructe.Extensions
             const string adminPassword = "admin123.";
 
             //UserManager
-            UserManager<IdentityUser> userManager = app
+            UserManager<AppUser> userManager = app
             .ApplicationServices.CreateScope().ServiceProvider
-            .GetRequiredService<UserManager<IdentityUser>>();
+            .GetRequiredService<UserManager<AppUser>>();
 
             //RoleManager
             RoleManager<IdentityRole> roleManager = app.ApplicationServices
             .CreateAsyncScope().ServiceProvider
             .GetRequiredService<RoleManager<IdentityRole>>();
 
-            IdentityUser user = await userManager.FindByNameAsync(adminUser);
+            AppUser user = await userManager.FindByNameAsync(adminUser);
 
             if (user is null)
             {
-                user = new IdentityUser(adminUser)
+                user = new AppUser
                 {
                     Email = "admin@gmail.com",
                     PhoneNumber = "053466484",
-                    UserName = adminUser
+                    UserName = adminUser,
+
                 };
 
                 var result = await userManager.CreateAsync(user, adminPassword);
@@ -45,8 +48,8 @@ namespace crm_app.Infrastructe.Extensions
             }
 
         }
-    
-        
+
+
     }
 
 }

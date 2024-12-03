@@ -1,25 +1,50 @@
-@model (IdentityUser,IEnumerable<Company>)
+@model AppUser
 
+@{
+    Layout = null;
+}
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
 
-<div class="profile">
-    <aside>
-        <partial name="_profileSideBar" />
-    </aside>
+<body style="background-color:smoke-white; ">
 
-    <div class="profile_left">
-        <h1>Profilim</h1>
-        <h5>@Model.Item1.UserName</h5>
-        <h5>@Model.Item1.Email</h5>
-        <h5>@Model.Item1.PhoneNumber</h5>
-        <p>&nbsp;</p>
-        @foreach (var company in Model.Item2)
-        {
-            <h4>@company.companyName</h4>
-            <img src="@company.CompanyLogo" />
-            <h4>@company?.category?.CategoryName</h4>
-        }
+    <div class="row" style="margin-top: 2.3rem;">
+        <div class="col-md-2">
+            <partial name="_ProfilSideBar" />
+        </div>
+        <div class="col-md-8" style="margin-left: 1.3rem; ">
+            <div class="card" style="margin-top: 0;">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Hesabım</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <!-- Profile Picture -->
+                        <img src="@Model.FirmaLogo" class="rounded-circle mb-3" alt="Profile Picture"
+                            style="width: 150px; height:150px;">
 
+                        <!-- Profile Details -->
+                        <h4 class="card-title">@Model.FirmaAdi</h4>
+                        <p class="card-text"> @Model.uzmanlikAlani </p>
 
+                        <!-- Profile Information -->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Ad:</strong> @Model.AD</li>
+                            <li class="list-group-item"><strong>Soyad:</strong> @Model.SOYAD </li>
+                            <li class="list-group-item"><strong>Email:</strong> @Model.Email</li>
+                            <li class="list-group-item"><strong>Telefon Numarası:</strong> @Model.PhoneNumber</li>
+                            <li class="list-group-item"><strong>Adres:</strong> @Model.Şehir /@Model.İlçe ,
+                                @Model.TamAdres </li>
+
+                            <li class="list-group-item"><strong>Biyografi:</strong>@Model.Biyografi</li>
+                            <li class="list-group-item"><strong>Üyelik Başlagınç Tarihi:</strong>@Model.baslangic
+                                <strong><b>||</b></strong>
+                                <strong>Üyelik Bitiş Tarihi:</strong>@Model.bitis
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-
-</div>
+</body>

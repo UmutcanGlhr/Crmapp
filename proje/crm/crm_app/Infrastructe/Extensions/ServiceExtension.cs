@@ -1,3 +1,5 @@
+using Entities.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
@@ -13,18 +15,21 @@ namespace crm_app.Infrastructe.Extensions
         {
             services.AddDbContext<RepositoryContext>(options =>
             {
-                options.UseSqlite(configuration.GetConnectionString("sqlconnection"),
+                options.UseSqlServer(configuration.GetConnectionString("mssqlconnection"),
                      b => b.MigrationsAssembly("crm_app"));
-                options.EnableSensitiveDataLogging(true);
+                options.EnableSensitiveDataLogging(false);
+
+
             });
         }
 
         public static void ConfigureIdentity(this IServiceCollection services)
         {
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddIdentity<AppUser, IdentityRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
                 options.User.RequireUniqueEmail = true;
+                options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+ğĞüÜşŞıİçÇ";
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireDigit = false;
@@ -38,7 +43,7 @@ namespace crm_app.Infrastructe.Extensions
             services.AddSession(options =>
             {
                 options.Cookie.Name = "crm_app.Session";
-                options.IdleTimeout = TimeSpan.FromMinutes(10);
+                options.IdleTimeout = TimeSpan.FromMinutes(180);
             });
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
@@ -50,12 +55,12 @@ namespace crm_app.Infrastructe.Extensions
             services.AddScoped<IRepositoryManager, RepositoryManager>();
             services.AddScoped<IMeetRepository, MeetRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
-            services.AddScoped<IAdressRepository,AdressRepository>();
-            services.AddScoped<ICompanyRepository,CompanyRepository>();
-            services.AddScoped<IProductRepository,ProductRepository>();
-            services.AddScoped<IOrderRepositoy,OrderRepository>();
-            services.AddScoped<IPaymentRepository,PaymentRepository>();
-            
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IPaymentRepository, PaymentRepository>();
+            services.AddScoped<IContactRepository, ContactRepository>();
+            services.AddScoped<IMeetSlotRepository, MeetSlotRepository>();
+            services.AddScoped<ISiteSettingsRepository, SiteSettingsRepository>();
+
         }
 
         public static void ConfigureServiceRegistration(this IServiceCollection services)
@@ -63,15 +68,32 @@ namespace crm_app.Infrastructe.Extensions
             services.AddScoped<IServiceManager, ServiceManager>();
             services.AddScoped<IMeetService, MeetManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
-            services.AddScoped<IAuthService,AuthManager>();
-            services.AddScoped<IAdressService,AdressManager>();
-            services.AddScoped<ICompanyService,CompanyManager>(); 
-            services.AddScoped<IProductService,ProductManager>();
-            services.AddScoped<IOrderService,OrderManager>();
-            services.AddScoped<IPaymentService,PaymentManager>();
-            
+            services.AddScoped<IAuthService, AuthManager>();
+            services.AddScoped<IProductService, ProductManager>();
+            services.AddScoped<IPaymentService, PaymentManager>();
+            services.AddScoped<IContactService, ContactManager>();
+            services.AddScoped<ISiteService, SiteManager>();
+
+        }
+        public static void ConfigureApplicationCookie(this IServiceCollection services)
+        {
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = new PathString("/Account/Login");
+                options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(180);
+                options.AccessDeniedPath = new PathString("/Account/AccessDenied");
+            });
         }
 
+        public static void ConfigureRouting(this IServiceCollection services)
+        {
+            services.AddRouting(options =>
+            {
+                options.LowercaseUrls = true;
+                options.AppendTrailingSlash = false;
+            });
+        }
 
     }
 }

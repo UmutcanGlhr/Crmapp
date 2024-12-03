@@ -1,8 +1,72 @@
 @model IEnumerable<Category>
-<h1>Cagetory Index</h1>
+<div class="my-3" ></div>
 
-@foreach(Category category in Model){
-    <h1>@category.CategoryName</h1>
-}
+<div class="list-container my-3">
+    <h2 class="list-title my-3">Kategori Listesi</h2>
+    <ul class="responsive-list my-3">
 
-<a asp-controller="Category" asp-action="categoryCreate">Create</a>
+        @foreach (Category category in Model)
+        {
+            <li>
+                <span class="item-title">@category.CategoryName</span>
+
+            </li>
+        }
+
+    </ul>
+    <div class="text-center">
+        <a asp-controller="Category" asp-action="categoryCreate" class="btn btn-outline-success form-control">Create</a>
+    </div>
+</div>
+
+
+
+
+<style>
+    .list-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .list-title {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .responsive-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .responsive-list li {
+        background-color: #f4f4f4;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s;
+    }
+
+    .responsive-list li:hover {
+        background-color: #ddd;
+    }
+
+    .item-title {
+        font-size: 18px;
+    }
+
+    .item-action {
+        font-size: 14px;
+        color: #007BFF;
+        cursor: pointer;
+    }
+
+    .item-action:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive design */
+</style>

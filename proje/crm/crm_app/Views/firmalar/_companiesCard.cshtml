@@ -1,0 +1,19 @@
+@model AppUser
+
+
+
+<div class="col-sm-12 col-md-4 my-3">
+    <div class="card" style="width: 18rem;">
+        <img src="@Model?.FirmaLogo" class="card-img-top" style="width:auto; height: 40vh;">
+        <div class="card-body">
+            <h5 class="card-title">@Model?.FirmaAdi</h5>
+            <p class="card-text">@Model?.uzmanlikAlani</p>
+            <p class="card-text">@Model?.TamAdres,@Model?.Şehir/@Model?.İlçe</p> 
+            <div class="btn btn-group">
+                <a class="btn btn-primary mx-1" asp-action="Get" asp-route-id="@Model?.UserName">
+                    <i class="fa fa-arrow-right"></i>
+                    Randevu AL</a>
+            </div>
+        </div>
+    </div>
+</div>

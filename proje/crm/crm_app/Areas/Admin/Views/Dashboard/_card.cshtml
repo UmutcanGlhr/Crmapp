@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card bg-primary text-white" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h6 class="card-subtitle mb-2">Kullanıcılar</h6>
+                <h5 class="card-title">Toplam Kullanıcılar</h5>
+                <h3 class="text-center display-3">
+                    @await Component.InvokeAsync("UserSummary")
+                </h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4">
+        <div class="card bg-info text-white" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h6 class="card-subtitle mb-2">Aktif Kullanıcılar</h6>
+                <h5 class="card-title"></h5>
+                <h3 class="text-center display-3">
+                    @await Component.InvokeAsync("ActiveUser")
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-warning text-white" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h6 class="card-subtitle mb-2">Satılan Paket Sayısı</h6>
+                <h5 class="card-title"> </h5>
+                <h3 class="text-center display-3">
+                   @await Component.InvokeAsync("Payment")
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 my-4">
+        <div class="card bg-warning text-white" style="width: 18rem;">
+            <div class="card-body text-center">
+                <h6 class="card-subtitle mb-2">Paketlerden Kazanılan Toplam Tutar;</h6>
+                <h5 class="card-title"> </h5>
+                <h3 class="text-center display-3">
+                     @await Component.InvokeAsync("PriceSummary"),00TL
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>

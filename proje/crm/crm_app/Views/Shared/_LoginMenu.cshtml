@@ -1,16 +1,70 @@
 @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
 {
 
-    <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin Panel</a>
+    <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+        <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                style="width: 45px; height: 45px;">
+                <i class="fa fa-user-alt text-primary"></i>
+            </div>
+            <div class="ms-3">
+                <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="mb-1 text-white">Admin Panel</a>
+            </div>
+        </div>
+    </div>
+
+
+
 }
 
 @if (User.Identity.IsAuthenticated)
 {
+    <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+        <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                style="width: 45px; height: 45px;">
+                <i class="fa fa-user-alt text-primary"></i>
+            </div>
+            <div class="ms-3">
+                <a asp-controller="Profile" asp-action="Index" class="mb-1 text-white">Profilim</a>
+             
+            </div>
+        </div>
+    </div>
 
-    <a asp-controller="Profile" asp-action="Index">Profilim</a>
-    <a asp-controller="Profile" asp-action="Logout">Logout</a>
+
+    <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+        <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                style="width: 45px; height: 45px;">
+                <i class="fas fa-sign-out-alt text-primary"></i>
+            </div>
+            <div class="ms-3">
+                
+                <a asp-controller="Account" asp-action="Logout" class="mb-1 text-white">Çıkış Yap</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 }
 else
 {
-    <a asp-controller="Login" asp-action="Index" class="btn-login"><i class="fas fa-sign-in-alt"></i>Login</a>
+
+    <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+        <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                style="width: 45px; height: 45px;">
+                <i class="fas fa-sign-in-alt"></i>
+            </div>
+            <div class="ms-3">
+                <a asp-controller="Account" asp-action="Login" class="mb-1 text-white">Giriş Yap</a>
+            </div>
+        </div>
+    </div>
+
 }

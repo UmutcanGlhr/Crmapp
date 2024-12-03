@@ -1,0 +1,36 @@
+@model IEnumerable<MeetSlot>
+@{
+    Layout = null;
+}
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<div class="row" style="margin-top: 2.3rem;">
+    <div class="col-md-2">
+        <partial name="_ProfilSideBar" />
+    </div>
+    <div class="col-md" style="margin-left: 1rem;">
+        <h1 class="text-center">Randevuları Düzenle</h1>
+        <table class="table" style="margin-left: 20px;">
+            <thead>
+                <tr>
+                    <th scope="col">Randevu Tarihi</th>
+                    <th scope="col">Randevu Saati</th>
+                    <th scope="col">İşlemler</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var mt in Model)
+                {
+                    <tr>
+                        <th scope="row">@mt.Date</th>
+                        <td>@mt.Time</td>
+
+                        <td><a class="btn btn-outline-primary rounded-pill" asp-action="pasifet"
+                                asp-controller="Profile" asp-route-id="@mt.Id">Randevuyu pasif yap</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

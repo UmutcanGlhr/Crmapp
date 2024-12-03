@@ -4,17 +4,10 @@ namespace Services.Contracts
     {
         IMeetService MeetService{get;}
         ICategoryService CategoryService{get;}
-
         IAuthService AuthService{get;}
-
-        IAdressService AdressService{get;}
-
-        ICompanyService CompanyService{get;}
-
         IProductService ProductService{get;}
-
-        IOrderService OrderService{get;}
-         
         IPaymentService PaymentService{get;}
+        IContactService ContactService{get;}
+        ISiteService siteService{get;}
     }
 }

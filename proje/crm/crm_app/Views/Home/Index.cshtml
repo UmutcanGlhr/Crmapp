@@ -1,38 +1,176 @@
-@model IEnumerable<Company>
+@model HomePageViewModel
+<link href="~/css/showcase.css" rel="stylesheet">
+<div class="container-xxl py-2" style="margin-top: 4rem;">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.1s">
+                <div class="overflow-hidden">
+                    <img class="img-fluid w-100 h-100" src="@Model?.siteSettings?.ImgUrl" alt="">
+                </div>
+                <div class="d-flex align-items-center justify-content-between bg-light p-4">
+                    <h5 class="text-truncate me-3 mb-0">Randevu BUL</h5>
+                    <a asp-controller="firmalar" asp-action="Index"
+                        class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0"><i
+                            class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.3s">
+                <div class="overflow-hidden">
+                    <img class="img-fluid w-100 h-100" src="@Model?.siteSettings?.ImgUrl2" alt="">
+                </div>
+                <div class="d-flex align-items-center justify-content-between bg-light p-4">
+                    <h5 class="text-truncate me-3 mb-0">KAYIT OL</h5>
+                    <a asp-controller="Account" asp-action="Register"
+                        class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0"><i
+                            class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.5s">
 
-<section class="content-section">
-    <div class="left-section">
-        <img src="../images/randevufoto.png" alt="Left Image">
-        <a asp-controller="MeetEntry" asp-action="Index" class="btn-appointment">Randevu Al</a>
-    </div>
-    <div class="right-section">
-        <img src="../images/sirketekle.jpg" alt="Right Image">
-        <a asp-controller="Register" asp-action="Index" class="btn-add-company">Register</a>
-    </div>
-</section>
-
-<!-- Bizi Tercih Eden Firmalar -->
-<section id="partners" class="partners-section">
-    <h2>Bizi Tercih Eden Firmalar</h2>
-    <div class="partners-logos">
-        <button class="arrow left-arrow">←</button>
-        <div class="logos">
-            @foreach (Company cmp in Model)
-            {
-                <img src="@cmp.CompanyLogo" />
-            }
+            </div>
         </div>
-        <button class="arrow right-arrow">→</button>
     </div>
+    <hr>
+</div>
+@if (Model?.appUsers?.Count() > 0)
+{
+    <section class="">
+        <div class="sponsor-section">
+            <h2>Öne Çıkan Firmalar …</h2>
+            <div class="slider-container">
+                <div class="sponsor-logos">
+                    @foreach (var user in Model.appUsers)
+                    {
+                        <a asp-controller="firmalar" asp-action="get" asp-route-id="@user.UserName"><img src="@user.FirmaLogo"
+                                alt="Company 1"></a>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+@if (Model?.Products?.Count() > 0)
+{
+    <section class="Paket" id="Paket" style="margin-top: 3rem;">
+        <hr>
+        <div class="pricing-table text-center">
+            @foreach (var prd in Model.Products)
+            {
+                <div class="plan">
+                    <h2>@prd.ProductName</h2>
+                    <p>₺@prd.price,00</p>
+
+                    <a asp-action="Register" asp-controller="Account"
+                        class="btn btn-outline-primary rounded-pill">@prd.DenemeSüresi
+                        Ücretsiz Deneyin</a>
+                    <ul class="features">
+                        <li>@prd.PaketSüresi AY</li>
+                        <li>@prd.Description</li>
+
+                    </ul>
+                </div>
+            }
+
+        </div>
+        <hr>
+    </section>
+}
+
+
+
+<section class="About" id="About">
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase">Hakkımızda</h6>
+
+                    <p class="mb-4">@Model?.siteSettings?.hakkimizda</p>
+
+                    <div class="bg-primary d-flex align-items-center p-4 mt-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt fa-2x text-primary"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="fs-5 fw-medium mb-2 text-white">7/24 İletişim</p>
+                            <h3 class="m-0 text-secondary">@Model?.siteSettings?.siteNumber</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-4" style="min-height: 500px;">
+                    <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
+                        <img class="position-absolute img-fluid w-100 h-100" src="@Model?.siteSettings?.ImgUrl3"
+                            style="object-fit: cover; padding: 0 0 50px 100px;" alt="">
+                        <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50"
+                            src="@Model?.siteSettings?.ImgUrl4" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
 </section>
 
-<!-- Hakkımızda ve İletişim -->
-<section id="about" class="about-section">
-    <h2>Hakkımızda</h2>
-    <p>Biz bir teknoloji şirketiyiz, müşterilerimize en iyi hizmeti sunmak için çalışıyoruz...</p>
-</section>
+<section class="Contact" id="Contact" style="margin-bottom: 3.5rem;">
+    <div class="container-xxl py-5 d-flex justify-content-center align-items-center min-vh-100">
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">Haritaya Tıklayın</h6>
+                        <h1 class="mb-4">İletişim</h1>
+                        <iframe class="position-relative w-100"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122856.31859620664!2d29.927504048178948!3d39.41917345693498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb7b631e50dc61%3A0xb0202cf55b4347c9!2sK%C3%BCtahya%2C%20K%C3%BCtahya%20Merkez%2C%20K%C3%BCtahya!5e0!3m2!1str!2str!4v1695992496483!5m2!1str!2str"
+                            frameborder="0" style="height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0">
+                        </iframe>
 
-<section id="contact" class="contact-section">
-    <h2>İletişim</h2>
-    <p>Bize ulaşın: contact@example.com</p>
+                    </div>
+                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="bg-light p-5 h-100 d-flex align-items-center">
+                            <form method="post">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input asp-for="Contact.isim" type="text" class="form-control"
+                                                placeholder="İsminizi Giriniz" required>
+                                            <label asp-for="Contact.isim">İsminizi Giriniz</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" asp-for="Contact.Email"
+                                                placeholder="E-Posta Giriniz" required>
+                                            <label asp-for="Contact.Email">E-Posta Giriniz</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" asp-for="Contact.Konu"
+                                                placeholder="Konu Başlığı" required>
+                                            <label asp-for="Contact.Konu">Konu Başlığı</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="İletinizi Yazınız"
+                                                asp-for="Contact.Mesaj" style="height: 150px"></textarea>
+                                            <label asp-for="Contact.Mesaj">İletinizi Yazınız</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Gönder</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

@@ -2,135 +2,71 @@
 @{
     var product = ViewBag.product;
 }
-<h1 class="header">Ödeme Sayfası</h1>
-
-<div class="container">
-    <div class="card">
-        <h2>Sepet</h2>
-        <h3>@product.ProductName</h3>
-        <h4>@product.price TL</h4>
-
-        <div class="payment-form">
-            <h2>Make a Payment</h2>
-            <form asp-action="ConfigurePay" method="post">
-                <div class="form-group">
-                    <label asp-for="CardHolderName">Name On Card:</label>
-                    <input asp-for="CardHolderName" type="text" class="form-control" required />
+@{
+    Layout = null;
+}
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/css/pay.css" rel="stylesheet">
+<div class="row" style="margin-top: 2.3rem;">
+    <div class="col-md-2" style="margin-left: 20px;">
+        <partial name="_ProfilSideBar" />
+    </div>
+    <div class="col-md-7" style="margin-left: 1.3rem;">
+        <div class="container">
+            <div class="row">
+                <!-- Sepet Kartı -->
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3 shadow-sm">
+                        <h2 class="card-title">Sepet</h2>
+                        <hr />
+                        <h3>@product.ProductName</h3>
+                        <h4>@product.price TL</h4>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label asp-for="CardNumber">Card Number:</label>
-                    <input asp-for="CardNumber" type="text" class="form-control" maxlength="16"
-                        placeholder="XXXX XXXX XXXX XXXX" required />
+                <!-- Ödeme Formu -->
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3 shadow-sm">
+                        <h2 class="card-title">Ödeme Yap</h2>
+                        <form asp-action="configurepay" method="post">
+                            <div class="text-danger" asp-validation-summary="All"></div>
+                            <div class="form-group mb-3">
+                                <label asp-for="CardHolderName">Kart Üzerindeki İsim:</label>
+                                <input asp-for="CardHolderName" type="text" class="form-control" required />
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="CardNumber">Kart Numarası:</label>
+                                <input asp-for="CardNumber" type="text" class="form-control" maxlength="16"
+                                    placeholder="XXXX XXXX XXXX XXXX" required />
+                            </div>
+
+                            <div class="form-row mb-3">
+                                <div class="col">
+                                    <label asp-for="ExpirationMonth">Son Kullanma Ayı:</label>
+                                    <input type="text" asp-for="ExpirationMonth" placeholder="09" maxlength="2"
+                                        class="form-control" />
+                                </div>
+                                <div class="col">
+                                    <label asp-for="ExpirationYear">Son Kullanma Yılı:</label>
+                                    <input type="text" asp-for="ExpirationYear" placeholder="24" maxlength="2"
+                                        class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="Cvv">CVV:</label>
+                                <input asp-for="Cvv" type="text" class="form-control" maxlength="3" required />
+                            </div>
+
+                            <input type="hidden" asp-for="Amount" value="@product.price" />
+                            <input type="hidden" asp-for="productId" value="@product.ProductID" />
+
+                            <button type="submit" class="btn btn-primary w-100">Onayla</button>
+                        </form>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label asp-for="Cvv">CVV:</label>
-                    <input asp-for="Cvv" type="text" class="form-control" maxlength="3" required />
-                </div>
-
-                <div class="form-group half-width">
-                    <label asp-for="ExpirationMonth">Expiration Month:</label>
-                    <input type="text" asp-for="ExpirationMonth" placeholder="09" maxlength="2" class="form-control" />
-                </div>
-
-                <div class="form-group half-width">
-                    <label asp-for="ExpirationYear">Expiration Year:</label>
-                    <input type="text" asp-for="ExpirationYear" placeholder="24" maxlength="2" class="form-control" />
-                </div>
-
-                <input type="hidden" asp-for="Amount" value="@product.price" />
-                <input type="hidden" asp-for="productId" value="@product.ProductID" />
-
-                <button type="submit" class="submit-btn">Onayla</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
-
-<!-- Custom CSS -->
-<style>
-    body {
-        background-color: #f0f0f0;
-        font-family: Arial, sans-serif;
-    }
-
-    .container {
-        max-width: 600px;
-        margin: 40px auto;
-        padding: 20px;
-    }
-
-    .header {
-        text-align: center;
-        color: #333;
-    }
-
-    .card {
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-    }
-
-    h2,
-    h3,
-    h4 {
-        text-align: center;
-        margin: 0;
-        padding-bottom: 10px;
-    }
-
-    h4 {
-        color: #666;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-group.half-width {
-        display: inline-block;
-        width: 48%;
-        vertical-align: top;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-
-    .form-control {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-
-    .form-control:focus {
-        border-color: #4CAF50;
-        outline: none;
-    }
-
-    .submit-btn {
-        width: 100%;
-        padding: 10px;
-        font-size: 18px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .submit-btn:hover {
-        background-color: #45a049;
-    }
-
-    .payment-form {
-        margin-top: 20px;
-    }
-</style>

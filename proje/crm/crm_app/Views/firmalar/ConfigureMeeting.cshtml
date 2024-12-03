@@ -1,0 +1,52 @@
+@model MeetPageModel
+
+<div class="row my-3">
+    <div class="col-md-4 my-3">
+        <div class="card text-black bg-light mb-3" style="max-width: 18rem;">
+            <div class="card-header">Randevu Tarihi ve Saati</div>
+            <div class="card-body">
+                <h5 class="card-title">Randevu Tarihi : @Model?.meetSlot?.Date</h5>
+                <h5 class="card-title">Randevu Saati : @Model?.meetSlot?.Time</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 my-3">
+        <form asp-action="ConfigureMeeting" method="post">
+            <div class="mb-3">
+                <label asp-for="meet.ad" class="form-label">İsim Giriniz</label>
+                <input asp-for="meet.ad" class="form-control rounded-pill" required>
+            </div>
+            <div class="mb-3">
+                <label asp-for="meet.soyad" class="form-label">Soyisim Giriniz</label>
+                <input asp-for="meet.soyad" type="text" class="form-control rounded-pill" required>
+            </div>
+            <div class="mb-3">
+                <label asp-for="meet.telefon" class="form-label">Telefon Numarası Giriniz</label>
+                <input asp-for="meet.telefon" class="form-control rounded-pill" required>
+            </div>
+            <div class="mb-3">
+                <label asp-for="meet.Şehir" class="form-label">Şehir Giriniz</label>
+                <input asp-for="meet.Şehir" class="form-control rounded-pill" required>
+            </div>
+            <div class="mb-3">
+                <label asp-for="meet.ilçe" class="form-label">İlçe Giriniz</label>
+                <input asp-for="meet.ilçe" class="form-control rounded-pill" required>
+            </div>
+            <div class="mb-3">
+                <label asp-for="meet.Adres" class="form-label">Adres Giriniz</label>
+                <input asp-for="meet.Adres" class="form-control rounded-pill" required>
+            </div>
+            <div class="mb-3">
+                <label asp-for="meet.Description" class="form-label">Arıza ve benzeri durumları belirtiniz </label>
+                <input asp-for="meet.Description" class="form-control rounded-pill" required>
+            </div>
+            <input type="hidden" asp-for="meet.MeetSlotID" value="@Model?.meetSlot?.Id">
+            <input type="hidden" asp-for="meet.tarih" value="@Model?.meetSlot?.Date">
+            <input type="hidden" asp-for="meet.Saat" value="@Model?.meetSlot?.Time">
+            <input type="hidden" asp-for="meet.userID" value="@Model?.meetSlot?.userID">
+            
+            <button type="submit" class="btn btn-outline-primary rounded-pill">Randevu AL</button>
+        </form>
+    </div>
+
+</div>

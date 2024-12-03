@@ -1,14 +1,17 @@
+using System.Globalization;
 using crm_app.Models;
 using Entities.Dtos;
 using Entities.Models;
 using Iyzipay;
 using Iyzipay.Model;
+using Iyzipay.Model.V2;
+using Iyzipay.Model.V2.Subscription;
 using Iyzipay.Request;
+using Iyzipay.Request.V2.Subscription;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Services.Contracts;
 
 namespace crm_app.Controllers
@@ -16,42 +19,52 @@ namespace crm_app.Controllers
     [Authorize(Roles = "User")]
     public class ProfileController : Controller
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-
         private readonly IServiceManager _manager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<AppUser> _userManager;
 
-        public ProfileController(SignInManager<IdentityUser> signInManager, IServiceManager manager, UserManager<IdentityUser> userManager)
+        public ProfileController(IServiceManager manager, UserManager<AppUser> userManager)
         {
-            _signInManager = signInManager;
             _manager = manager;
             _userManager = userManager;
+        }
+
+        private SelectList GetDateSelectList()
+        {
+            return new SelectList(_manager.MeetService.GetAllMeetSlots(false), "id", "Date");
         }
         private SelectList GetCategoriesSelectList()
         {
             return new SelectList(_manager.CategoryService.GetAllCategory(false), "CategoryID", "CategoryName", "1");
         }
+
         public async Task<IActionResult> Index()
         {
             ViewData["Title"] = "Profilim";
 
             var user = await _userManager.GetUserAsync(User);
-            var id = user?.Id;
-            var company = _manager.CompanyService.GetCompany(id);
-            return View((user, company));
+
+            return View(user);
         }
 
-        public async Task<IActionResult> myMeets()
+
+        public async Task<IActionResult> myMeet()
         {
             ViewData["Title"] = "Profilim/Randevular";
             var user = await _userManager.GetUserAsync(User);
             var id = user?.Id;
-
             var model = _manager.MeetService.getMeet(id);
+
             return View(model);
         }
 
-        public async Task<IActionResult> pastMeets()
+        [HttpPost]
+        public IActionResult Complete([FromForm] int id)
+        {
+            _manager.MeetService.Complete(id);
+            return RedirectToAction("myMeet");
+        }
+
+        public async Task<IActionResult> pastMeet()
         {
             ViewData["Title"] = "Profilim/Geçmiş Randevular";
             var user = await _userManager.GetUserAsync(User);
@@ -60,137 +73,80 @@ namespace crm_app.Controllers
             var model = _manager.MeetService.PastMeets(id);
             return View(model);
         }
-        [HttpPost]
-        public IActionResult Complete([FromForm] int id)
-        {
-            _manager.MeetService.Complete(id);
-            return RedirectToAction("myMeets");
-        }
-        public async Task<IActionResult> Logout([FromQuery(Name = "ReturnUrl")] string ReturnUrl = "/")
-        {
-            await _signInManager.SignOutAsync();
-            return Redirect(ReturnUrl);
-        }
 
-        public async Task<IActionResult> AddressInformation()
+
+        public async Task<IActionResult> setting()
         {
+            ViewData["Title"] = "Profilim/Ayalar";
             var user = await _userManager.GetUserAsync(User);
-            var id = user?.Id;
-            var model = _manager.AdressService.GetAllAddress(id);
-            return View(model);
-        }
-        public IActionResult AdressCreate()
-        {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AdressCreate([FromForm] AdressDtoForInsertion adressDto)
-        {
-            var user = await _userManager.GetUserAsync(User);
-            adressDto.userId = user?.Id;
-
-            if (ModelState.IsValid)
-            {
-                _manager.AdressService.CreateAddress(adressDto);
-                return RedirectToAction("AddressInformation");
-            }
-            return View();
-        }
-        public async Task<IActionResult> settings()
-        {
-            var user = await _userManager.GetUserAsync(User);
-            var userId = user?.Id;
-            var model = _manager.CompanyService.GetCompany(userId);
-
-
-            return View(model);
-        }
-
-        public IActionResult createCompany()
-        {
             ViewBag.Categories = GetCategoriesSelectList();
-            return View();
+            return View(user);
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> createCompany([FromForm] CompanyDtoForInsertion companyDto, IFormFile file)
+        public async Task<IActionResult> setting([FromForm] AppUserDtoUpdate userDtoUpdate, IFormFile file)
         {
-            List<string> images = new List<string>();
+
+
             string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", file.FileName);
 
             using (var stream = new FileStream(path, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
-            companyDto.CompanyLogo = String.Concat("/images/", file.FileName);
             var user = await _userManager.GetUserAsync(User);
-            companyDto.userId = user?.Id;
             if (ModelState.IsValid)
             {
-                _manager.CompanyService.CreateSettings(companyDto);
-                return RedirectToAction("Index", "Profile");
+                userDtoUpdate.FirmaLogo = String.Concat("/images/", file.FileName);
+                await _manager.AuthService.Update(userDtoUpdate, user.Id);
+                return RedirectToAction("Index");
             }
             return View();
         }
 
 
-        public async Task<IActionResult> companyUpdate([FromRoute(Name = "id")] int id)
+        public ActionResult resetpassword()
         {
-            var user = await _userManager.GetUserAsync(User);
-            var userId = user?.Id;
-            var model = _manager.CompanyService.GetOneCompanyForUpdate(userId, false);
-
-            ViewBag.Categories = GetCategoriesSelectList();
-            return View(model);
+            ViewData["Title"] = "Profilim/Şifre Yenileme";
+            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> companyUpdate([FromForm] CompanyDtoForUpdate companyDto, IFormFile file)
+        public async Task<ActionResult> resetpassword([FromForm] ResetPasswordDto passwordDto)
         {
-
             var user = await _userManager.GetUserAsync(User);
-            var userId = user?.Id;
-
-
-            companyDto.userId = userId;
-            if (ModelState.IsValid)
-            {
-                string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", file.FileName);
-
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                    await file.CopyToAsync(stream);
-                }
-
-                companyDto.CompanyLogo = String.Concat("/images/", file.FileName);
-                _manager.CompanyService.UpdateOneCompany(companyDto);
-                return RedirectToAction("Index", "Profile");
-            }
-            return View();
+            var id = user?.Id;
+            var result = await _manager.AuthService.ResetPassword(passwordDto, id);
+            return result.Succeeded
+             ? RedirectToAction("Index")
+             : View();
         }
 
-        public IActionResult configureOrder()
+        public IActionResult configureproduct()
         {
+            ViewData["Title"] = "Profilim/Üyelik";
             var model = _manager.ProductService.GetAllProduct(false);
             return View(model);
         }
 
-        public IActionResult ConfigurePay([FromRoute(Name = "id")] int id)
+        public IActionResult configurepay([FromRoute(Name = "id")] int id)
         {
+            ViewData["Title"] = "Ödeme Sayfası";
             var model = _manager.ProductService.GetOneProduct(id, false);
             ViewBag.product = model;
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ConfigurePay([FromForm] PaymentDtoForCreation paymentDto)
+        public async Task<IActionResult> configurepay([FromForm] PaymentDtoForCreation paymentDto)
         {
+            Random random = new Random();
+            int basketID = random.Next(1000000, 10000000);
             var user = await _userManager.GetUserAsync(User);
             var userId = user?.Id;
             paymentDto.UserID = userId;
-            Product? product = _manager.ProductService.GetOneProduct(paymentDto.productId, false);
+            var ipadress = HttpContext.Connection.RemoteIpAddress?.MapToIPv4().ToString();
+            Entities.Models.Product? product = _manager.ProductService.GetOneProduct(paymentDto.productId, false);
             if (ModelState.IsValid)
             {
 
@@ -202,12 +158,12 @@ namespace crm_app.Controllers
 
                 CreatePaymentRequest request = new CreatePaymentRequest();
                 request.Locale = Locale.TR.ToString();
-                request.ConversationId = "123456789";
-                request.Price = paymentDto.Amount.ToString();
-                request.PaidPrice = paymentDto.Amount.ToString();
+                request.ConversationId = basketID.ToString();
+                request.Price = paymentDto.Amount;
+                request.PaidPrice = paymentDto.Amount;
                 request.Currency = Currency.TRY.ToString();
                 request.Installment = 1;
-                request.BasketId = "B67832";
+                request.BasketId = basketID.ToString();
                 request.PaymentChannel = PaymentChannel.WEB.ToString();
                 request.PaymentGroup = PaymentGroup.PRODUCT.ToString();
 
@@ -218,58 +174,58 @@ namespace crm_app.Controllers
                 paymentCard.ExpireMonth = paymentDto.ExpirationMonth;
                 paymentCard.ExpireYear = paymentDto.ExpirationYear;
                 paymentCard.Cvc = paymentDto.Cvv;
-                paymentCard.RegisterCard = 1;
+                paymentCard.RegisterCard = 0;
                 request.PaymentCard = paymentCard;
 
-
                 Buyer buyer = new Buyer();
-                buyer.Id = "BY789";
-                buyer.Name = "John Doe";
-                buyer.Surname = "Doe";
-                buyer.GsmNumber = "+905350000000";
-                buyer.Email = "email@email.com";
-                buyer.IdentityNumber = "74300864791";
-                buyer.LastLoginDate = "2015-10-05 12:43:35";
-                buyer.RegistrationDate = "2013-04-21 15:12:09";
-                buyer.RegistrationAddress = "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1";
-                buyer.Ip = "85.34.78.112";
-                buyer.City = "Istanbul";
+                buyer.Id = user?.Id;
+                buyer.Name = user?.UserName;
+                buyer.Surname = user?.UserName;
+                buyer.GsmNumber = user?.PhoneNumber;
+                buyer.Email = user?.Email;
+                buyer.IdentityNumber = user?.Id;
+                buyer.LastLoginDate = "";
+                buyer.RegistrationDate = "";
+                buyer.RegistrationAddress = user?.TamAdres;
+                buyer.Ip = ipadress;
+                buyer.City = user?.Şehir + "/" + user?.İlçe;
                 buyer.Country = "Turkey";
-                buyer.ZipCode = "34732";
+                buyer.ZipCode = "";
                 request.Buyer = buyer;
 
 
                 Address shippingAddress = new Address();
-                shippingAddress.ContactName = "Jane Doe";
-                shippingAddress.City = "Istanbul";
+                shippingAddress.ContactName = user?.FirmaAdi;
+                shippingAddress.City = user?.Şehir;
                 shippingAddress.Country = "Turkey";
-                shippingAddress.Description = "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1";
-                shippingAddress.ZipCode = "34742";
+                shippingAddress.Description = user?.TamAdres;
+                shippingAddress.ZipCode = "";
                 request.ShippingAddress = shippingAddress;
 
 
                 Address billingAddress = new Address();
-                billingAddress.ContactName = "Jane Doe";
-                billingAddress.City = "Istanbul";
+                billingAddress.ContactName = user?.FirmaAdi;
+                billingAddress.City = user?.Şehir;
                 billingAddress.Country = "Turkey";
-                billingAddress.Description = "Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1";
-                billingAddress.ZipCode = "34742";
+                billingAddress.Description = user?.TamAdres;
+                billingAddress.ZipCode = "";
                 request.BillingAddress = billingAddress;
+
 
                 List<BasketItem> basketItems = new List<BasketItem>();
                 BasketItem firstBasketItem = new BasketItem();
                 firstBasketItem.Id = paymentDto.Id.ToString();
                 firstBasketItem.Name = product?.ProductName;
-                firstBasketItem.Category1 = "Collectibles";
-                firstBasketItem.Category2 = "Accessories";
+                firstBasketItem.Category1 = product?.ProductName;
+                firstBasketItem.Category2 = product?.ProductName;
                 firstBasketItem.ItemType = BasketItemType.PHYSICAL.ToString();
-                firstBasketItem.Price = paymentDto.Amount.ToString();
+                firstBasketItem.Price = paymentDto.Amount;
                 basketItems.Add(firstBasketItem);
-
                 request.BasketItems = basketItems;
 
                 Iyzipay.Model.Payment payment = Iyzipay.Model.Payment.Create(request, options);
-                if (payment is not null)
+
+                if (payment.Status == "success")
                 {
                     var newPaymentDto = new PaymentDtoForCreation
                     {
@@ -282,13 +238,47 @@ namespace crm_app.Controllers
                         // Diğer gerekli alanlar burada set edilir...
                         // CardHolderName ve diğer init-only alanlar boş kalacak
                     };
-
+                    int date = Convert.ToInt32(product?.PaketSüresi);
+                    DateTime currentDate = DateTime.Now;
+                    DateTime end = currentDate.AddMonths(date);
+                    string baslangicTarihi = currentDate.ToString("dd/MM/yyyy");
+                    string bitisTarihi = end.ToString("dd/MM/yyyy");
+                    await _manager.AuthService.UserActive(userId, baslangicTarihi, bitisTarihi);
                     _manager.PaymentService.CreatePayment(newPaymentDto);
-                    return RedirectToAction("Index");
+                    return RedirectToPage("/complate");
+                }
+                else
+                {
+                    return RedirectToPage("/failcomplate");
                 }
 
             }
 
+            return View();
+        }
+
+
+        public async Task<IActionResult> randevu()
+        {
+            ViewData["Title"] = "Profilim/Randevu Oluştuma";
+            var user = await _userManager.GetUserAsync(User);
+            var id = user?.Id;
+            var model = _manager.MeetService.GetMeetSlot(false, id);
+
+            return View(model);
+        }
+        [HttpGet]
+        public IActionResult pasifet([FromRoute(Name = "id")] int id)
+        {
+
+            _manager.MeetService.UpdateMeetSlot(id);
+            return RedirectToAction("randevu");
+        }
+
+
+        public IActionResult cancel([FromRoute] int slotID)
+        {
+            _manager.MeetService.CancelSlot(slotID);
             return View();
         }
     }

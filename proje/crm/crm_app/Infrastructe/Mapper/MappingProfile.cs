@@ -8,10 +8,10 @@ namespace crm_app.Infrastructe.Mapper
     {
         public MappingProfile()
         {
-            CreateMap<AdressDtoForInsertion,Adress>();
-            CreateMap<CompanyDtoForInsertion,Company>();
-            CreateMap<CompanyDtoForUpdate,Company>().ReverseMap();
-            CreateMap<PaymentDtoForCreation,Payment>();
+            CreateMap<PaymentDtoForCreation, Payment>();
+            CreateMap<ProductDtoForInsertion, Product>();
+            CreateMap<ProductDtoForUpdate, Product>().ReverseMap();
+            CreateMap<siteSettingsDtoForUpdate, SiteSettings>().ReverseMap();
         }
     }
-}
+}   

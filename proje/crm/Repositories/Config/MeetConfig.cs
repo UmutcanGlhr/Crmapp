@@ -14,8 +14,7 @@ namespace Repositories.Config
             builder.Property(c => c.Adres).IsRequired();
 
             builder.HasData(
-                new Meet() { meetID = 1, ad = "berkay", soyad = "ekit", telefon = "0513212313", Description = "format atilacak", Adres = "kütahya", CompanyID = 1, userID = "sadasdasdasdsa" }
-
+                new Meet() { meetID = 1, ad = "berkay", soyad = "ekit", telefon = "0513212313", Description = "format atilacak", Adres = "zafer tepe mh", Şehir = "kütahya", ilçe = "Merkez", MeetSlotID = 1 }
             );
         }
     }

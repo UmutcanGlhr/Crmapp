@@ -12,8 +12,9 @@ namespace Repositories.Config
             builder.Property(c => c.CategoryName).IsRequired();
 
             builder.HasData(
-                new Category() { CategoryID = 1, CategoryName = "bilgisayar" }
-
+                new Category() { CategoryID = 1, CategoryName = "Yazılım" },
+                new Category() { CategoryID = 2, CategoryName = "Tesisat" },
+                new Category() { CategoryID = 3, CategoryName = "Bilgisayar" }
             );
         }
 

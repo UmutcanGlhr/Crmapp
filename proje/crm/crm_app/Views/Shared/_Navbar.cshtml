@@ -1,17 +1,33 @@
-<div class="header-container">
-    <div class="logo">
-        <a asp-controller="Home" asp-action="Index"><img src="../images/logo.jpeg" alt="Logo"></a>
+<!-- Topbar Start -->
+<div class="container-fluid bg-light d-none d-lg-block">
+    <div class="row align-items-center top-bar">
+        <div class="col-lg-3 col-md-12 text-center text-lg-start">
+            <a asp-action="Index" asp-controller="Home" class="navbar-brand m-0 p-0">
+                <h1 class="text-primary m-0">Randevu BUL</h1>
+            </a>
+        </div>
     </div>
-    <nav>
-        <ul class="center-links">
-            <li><a href="#partners">Bizi Tercih Eden Firmalar</a></li>
-            <li><a href="#about">Hakkımızda</a></li>
-            <li><a href="#contact">İletişim</a></li>
-            <li><a asp-controller="Company" asp-action="Index">Firmalar</a></li>
-        </ul>
-    </nav>
+</div>
+<!-- Topbar End -->
 
-    <div class="auth-buttons">
-        <partial name="_LoginMenu" />
-    </div>
+
+<!-- Navbar Start -->
+<div class="container-fluid nav-bar bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav me-auto">
+                <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Anasayfa</a>
+                <a href="#Paket" class="nav-item nav-link">Paketler</a>
+                <a href="#About" class="nav-item nav-link">Hakkımızda</a>
+                <a href="#Contact" class="nav-item nav-link">İletişim</a>
+                <a asp-controller="firmalar" asp-action="Index" class="nav-item nav-link">Firmalar</a>
+                <a class="nav-item nav-link" asp-controller="Sorgu" asp-action="Index">Randevu Sorgulama</a>
+            </div>
+            <partial name="_LoginMenu" />
+        </div>
+    </nav>
 </div>

@@ -5,14 +5,14 @@ namespace Repositories.Contracts
         IMeetRepository Meet {get;}
         ICategoryRepository Category{get;}
 
-        IAdressRepository Adress{get;}
-
-        ICompanyRepository Company{get;}
-
         IProductRepository Product{get;}
-        IOrderRepositoy Order{get;}
 
         IPaymentRepository Payment{get;}
+
+        IContactRepository Contact{get;}
+
+        IMeetSlotRepository MeetSlot{get;}
+        ISiteSettingsRepository settingsRepository{get;}
 
         void Save();
     }

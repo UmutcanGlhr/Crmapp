@@ -1,0 +1,113 @@
+@model IEnumerable<Product>
+@{
+    Layout = null;
+}
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<div class="row" style="margin-top: 2.3rem;">
+    <div class="col-md-2" style="margin-left: 20px;">
+        <partial name="_ProfilSideBar" />
+    </div>
+    <div class="col-md-7" style="margin-left: 1.3rem;">
+        <h1>Paketler</h1>
+        <div class="pricing-table text-center">
+            @foreach (var prd in Model)
+            {
+                <div class="plan">
+                    <h2>@prd.ProductName</h2>
+                    <p>₺@prd.price</p>
+                    <small>Toplam @prd.price + KDV</small>
+                    <a class="btn btn-outline-success rounded-pill" asp-action="ConfigurePay" asp-controller="Profile" asp-route-id="@prd.ProductID">Satın Al</a>
+                    <ul class="features">
+                        <li>@prd.PaketSüresi AY</li>
+                        <li>@prd.Description</li>
+                    </ul>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .pricing-table {
+        display: flex;
+        gap: 20px;
+    }
+
+    .plan {
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .plan h2 {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .plan p {
+        font-size: 32px;
+        font-weight: bold;
+        color: #1dbf73;
+        margin: 10px 0;
+    }
+
+    .plan small {
+        display: block;
+        color: #888;
+        margin-bottom: 20px;
+    }
+
+    .plan button {
+        background-color: #1dbf73;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .plan button:hover {
+        background-color: #17a163;
+    }
+
+    .features {
+        text-align: left;
+    }
+
+    .features li {
+        list-style: none;
+        margin: 10px 0;
+        color: #555;
+    }
+
+    .features li::before {
+        content: "✔️";
+        margin-right: 8px;
+        color: #1dbf73;
+    }
+
+    .most-popular {
+        border: 2px solid #7f3fff;
+        position: relative;
+    }
+
+    .most-popular::before {
+        content: "EN ÇOK TERCİH EDİLEN";
+        background-color: #7f3fff;
+        color: white;
+        font-size: 12px;
+        padding: 5px;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+    }
+</style>

@@ -1,0 +1,59 @@
+@model siteSettingsDtoForUpdate
+
+<div class="row my-3">
+    <div class="col"></div>
+    <div class="col">
+        <h1 class="text-center my-4">Site Ayaları</h1>
+        <form asp-action="Index" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group ">
+                <label asp-for="siteAdi"> Site Adı</label>
+                <input asp-for="siteAdi" type="text" class="form-control">
+            </div>
+            <div class="form-group ">
+                <label asp-for="siteMail">E-Mail</label>
+                <input asp-for="siteMail" type="text" class="form-control">
+            </div>
+            <div class="form-group ">
+                <label asp-for="hakkimizda">Hakkımızda</label>
+                <textarea asp-for="hakkimizda" aria-label="With textarea" type="text" class="form-control"></textarea>
+            </div>
+            <div class="form-group ">
+                <label asp-for="siteNumber">Site Telefon</label>
+                <input asp-for="siteNumber" type="text" class="form-control">
+            </div>
+            <div class="form-group ">
+                <label asp-for="siteInstagram">Intagram</label>
+                <input asp-for="siteInstagram" type="text" class="form-control">
+            </div>
+            <div class="form-group ">
+                <label asp-for="siteLinkedin">Linkedin</label>
+                <input asp-for="siteLinkedin" type="text" class="form-control">
+            </div>
+            <div class="form-group ">
+                <label asp-for="copyright">Telif Hakkı Metni</label>
+                <input asp-for="copyright" type="text" class="form-control">
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="ImgUrl"> randevu bul resmi 500x300</label>
+                <input name="file1" type="file" class="form-control" />
+                
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="ImgUrl2">kayıt ol resmi 500x300</label>
+                <input name="file2" type="file" class="form-control"/>
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="ImgUrl3">alttaki büyük resim 700x700</label>
+                <input name="file3" type="file" class="form-control"/>
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="ImgUrl4">küçük resim 400xe400</label>
+                <input name="file4" type="file" class="form-control"/>
+            </div>
+            <input type="hidden" asp-for="siteID">
+            <button type="submit" class="btn btn-outline-primary my-3 form-control rounded-pill">Kaydet</button>
+        </form>
+    </div>
+    <div class="col"></div>
+</div>

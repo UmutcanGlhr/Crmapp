@@ -77,6 +77,26 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[6.0.*, )"
+            },
+            "System.ServiceModel.Federation": {
+              "target": "Package",
+              "version": "[6.0.*, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[6.0.*, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[6.0.*, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[6.0.*, )"
             }
           },
           "imports": [
@@ -236,6 +256,10 @@
               "version": "[2.1.61, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.0, )"
             },

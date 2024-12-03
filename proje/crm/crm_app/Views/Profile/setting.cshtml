@@ -1,0 +1,70 @@
+@model AppUser
+@{
+    Layout = null;
+}
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<div class="row" style="margin-top: 2.3rem;">
+    <div class="col-md-2" style="margin-left: 20px;">
+        <partial name="_ProfilSideBar" />
+    </div>
+    <div class="col-md-8" style="margin-left: 1.3rem;">
+        <div class="text-center">
+            <div class="display-6">Profil Bilgilerinizi Güncelleyin</div>
+        </div>
+        <form method="post" asp-action="setting" enctype="multipart/form-data">
+            <div class="text-danger" asp-validation-summary="All"></div>
+
+
+            <div class="form-group my-3 ">
+                <label asp-for="AD">İsim</label>
+                <input asp-for="AD" class="form-control" />
+            </div>
+            <div class="form-group my-3 ">
+                <label asp-for="SOYAD">Soyad</label>
+                <input asp-for="SOYAD" class="form-control" />
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="FirmaAdi">Firma Adı</label>
+                <input asp-for="FirmaAdi" class="form-control" />
+            </div>
+
+            <div class="form-group my-3">
+                <label asp-for="Şehir">Şehir</label>
+                <input asp-for="Şehir" class="form-control" />
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="İlçe">İlçe</label>
+                <input asp-for="İlçe" class="form-control" />
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="TamAdres">Adres</label>
+                <input asp-for="TamAdres" class="form-control" />
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="uzmanlikAlani">Uzmanlık Alanınızı Yazınız</label>
+                <input asp-for="uzmanlikAlani" class="form-control" />
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="Biyografi">Biyografi Yazınız</label>
+                <input asp-for="Biyografi" class="form-control" />
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="FirmaLogo">Logo</label>
+                <input name="file" type="file" class="form-control" />
+                <input type="hidden" asp-for="FirmaLogo">
+            </div>
+            <div class="form-group my-3">
+                <select class="form-control" asp-items="@ViewBag.Categories" asp-for="categoryID"></select>
+            </div>
+                <input type="hidden" asp-for="Id">
+            <div class="form-group my-3 text-center">
+                <div class="btn-group ">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fa fa-save"></i>
+                        Güncelle
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

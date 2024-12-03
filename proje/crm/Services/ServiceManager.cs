@@ -7,24 +7,22 @@ namespace Services
         private readonly IMeetService _meetService;
         private readonly ICategoryService _categoryService;
         private readonly IAuthService _authService;
-        private readonly IAdressService _adressService;
-        private readonly ICompanyService _companyService;
 
         private readonly IProductService _productService;
 
-        private readonly IOrderService _orderService;
-
         private readonly IPaymentService _paymentService;
-        public ServiceManager(IMeetService meetService, ICategoryService categoryService, IAuthService authService, IAdressService adressService, ICompanyService companyService, IProductService productService, IOrderService orderService, IPaymentService paymentService)
+        private readonly IContactService _contactService;
+        private readonly ISiteService _siteService;
+        public ServiceManager(IMeetService meetService, ICategoryService categoryService, IAuthService authService, IProductService productService, IPaymentService paymentService, IContactService contactService, ISiteService siteService)
         {
             _meetService = meetService;
             _categoryService = categoryService;
             _authService = authService;
-            _adressService = adressService;
-            _companyService = companyService;
+
             _productService = productService;
-            _orderService = orderService;
             _paymentService = paymentService;
+            _contactService = contactService;
+            _siteService = siteService;
         }
 
         public IMeetService MeetService => _meetService;
@@ -33,14 +31,12 @@ namespace Services
 
         public IAuthService AuthService => _authService;
 
-        public IAdressService AdressService => _adressService;
-
-        public ICompanyService CompanyService => _companyService;
-
         public IProductService ProductService => _productService;
 
-        public IOrderService OrderService => _orderService;
-
         public IPaymentService PaymentService => _paymentService;
+
+        public IContactService ContactService => _contactService;
+
+        public ISiteService siteService => _siteService;
     }
 }

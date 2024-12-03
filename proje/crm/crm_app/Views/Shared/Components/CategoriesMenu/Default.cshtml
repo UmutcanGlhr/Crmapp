@@ -1,8 +1,19 @@
 @model IEnumerable<Category>
 
-<div>
-    @foreach(var cat in Model){
-        <a href="#">@cat.CategoryName</a>
-        <p>&nbsp;</p>
-    }
+<div class="my-4">
+    <ul class="list-group">
+        <li class="list-group-item"><b>Kategoriler</b></li>
+        @foreach (var cat in Model)
+        {
+            <a asp-controller="firmalar" asp-action="kategori" asp-route-id="@cat.CategoryName">
+                <li class="list-group-item ">
+                    @cat.CategoryName?.ToUpper()
+                </li>
+            </a>
+        }
+    </ul>
 </div>
+
+
+
+

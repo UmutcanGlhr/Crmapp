@@ -7,7 +7,7 @@ namespace Entities.Models
         public String? UserID { get; set; }
 
         public int productId { get; set; }
-        public decimal Amount { get; set; } // Ödeme miktarı
+        public String? Amount { get; set; } // Ödeme miktarı
         public String? CardHolderName { get; set; } // Kart üzerindeki isim
         public String? CardNumber { get; set; } // Kart numarası
         public String? ExpirationMonth { get; set; } // Son kullanma tarihi - Ay
